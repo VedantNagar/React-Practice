@@ -215,6 +215,10 @@ main {
 .single-tour footer {
   padding: 1.5rem 2rem;
 }
+.delete-btn:hover {
+  color: #222;
+  background-color: #222;
+}
 .single-tour .delete-btn {
   display: block;
   width: 200px;

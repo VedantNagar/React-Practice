@@ -1,6 +1,6 @@
 import React from 'react';
 import Tour from './Tour';
-const Tours = ({ tours }) => {
+const Tours = ({ tours, removeTour }) => {
   return (
     <section>
       <div className='title'>
@@ -16,9 +16,8 @@ const Tours = ({ tours }) => {
               info={tour.info}
               image={tour.image}
               price={tour.price}
-            >
-              {' '}
-            </Tour>
+              removeTour={removeTour}
+            />
           );
         })}
       </div>
