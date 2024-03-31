@@ -40,10 +40,33 @@ function App() {
         <div className='underline'></div>
       </div>
       <div className='jobs-center'>
+        {jobs.map((job, curr) => {
+          return (
+            <>
+              <button
+                key={job.id}
+                onClick={() => setIndex(curr)}
+                className={`job-btn ${curr === index && 'active-btn'}`}
+              >
+                {job.company}
+              </button>
+            </>
+          );
+        })}
         <article className='job-info'>
           <h3>{title}</h3>
           <h4>{company}</h4>
           <p className='job-date'>{dates}</p>
+          {duties.map((duty, index) => {
+            return (
+              <>
+                <div className='job-desc' key={index}>
+                  <FaAngleDoubleRight className='job-icon'></FaAngleDoubleRight>
+                  <p>{duties}</p>
+                </div>
+              </>
+            );
+          })}
         </article>
       </div>
     </section>
